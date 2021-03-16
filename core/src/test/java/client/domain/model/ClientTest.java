@@ -8,7 +8,7 @@ public class ClientTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void clientInvalidNameTest() throws Exception {
-        Client model = new DefaultClient();
+        Client model = new DefaultClient("test");
 
         model.validate();
         Assert.fail();
@@ -16,18 +16,16 @@ public class ClientTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void clientEmptyNameTest() throws Exception {
-        Client model = new DefaultClient();
+        Client model = new DefaultClient("Edson", "Prestes");
 
-        model.setName("");
         model.validate();
         Assert.fail();
     }
 
     @Test
     public void clientValidNameTest() throws Exception {
-        Client model = new DefaultClient();
+        Client model = new DefaultClient("Faz");
 
-        model.setName("Faz");
         model.validate();
     }
 }

@@ -1,10 +1,17 @@
 package client.domain;
 
+import java.util.List;
+
 public interface Client {
 
-    String getName();
+    String getFirstName();
+    Address getHomeAddress();
+    Address getWorkAddress();
 
-    void setName(String name);
+    void addEMail(String contact);
+    void  addCellPhone(String contact);
+
+    List<Contact> getContacts();
 
     void validate() throws Exception;
 }

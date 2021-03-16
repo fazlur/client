@@ -8,13 +8,13 @@
  <artifactId>client</artifactId>
  <version>1.0-SNAPSHOT</version>
  <modules>
-  <module>core</module>
   <module>core-api</module>
-  <module>app</module>
-  <module>webapp</module>
+  <module>core</module>
   <module>repository-api</module>
   <module>repository-jdbc</module>
   <module>repository-hibernate</module>
+  <module>app</module>
+  <module>webapp</module>
  </modules>
  <packaging>pom</packaging>
 
